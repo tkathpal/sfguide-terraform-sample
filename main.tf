@@ -13,7 +13,7 @@ provider "snowflake" {
   user              = "tf_user"
   authenticator     = "SNOWFLAKE_JWT"
   role              = "SYSADMIN"
-  private_key       = file(/keypair/tf_user_private_key.p8)
+  private_key       = file("~/keypair/tf_user_private_key.p8")
 }
 
 resource "snowflake_database" "db" {
